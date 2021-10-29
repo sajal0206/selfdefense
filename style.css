@@ -18,6 +18,38 @@
 html{
     overflow-x: hidden;
 }
+header{
+    border-bottom: solid 0.1rem #fff;
+    box-shadow: 0 0.3rem 1rem #000;
+}
+header a{
+    transition: 0.2s;
+    position: relative;
+}
+header a:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+header a:hover:before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+nav a{
+    border: solid 0.1rem transparent;
+    padding: 0.2rem 0.3rem;
+    transition: 0.2s;
+}
+nav a:hover{
+    border: solid 0.1rem #000;
+}
 .contact{
     backdrop-filter: blur(2px) saturate(98%);
     -webkit-backdrop-filter: blur(2px) saturate(98%);
